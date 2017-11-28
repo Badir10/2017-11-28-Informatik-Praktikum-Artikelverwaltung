@@ -8,6 +8,14 @@ public class Artikelliste {
         artikelListe = new ArrayList<Artikel>();
     }
 
+    public int count(){
+        int ctr = 0;
+        for(Artikel meinArtikel: artikelListe){
+            ctr++;
+        }
+        return ctr;
+    }
+
     public Artikel holen(int index){
         return artikelListe.get(index);
     }
@@ -16,7 +24,7 @@ public class Artikelliste {
         artikelListe.add(produkt);
     }
 
-    public void hinzufuegen(int index){
+    public void entfernen(int index){
         artikelListe.remove(index);
     }
 
